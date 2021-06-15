@@ -1,5 +1,6 @@
 var genericVar = document.getElementById("food-search");
 var searchBTN = document.getElementById("searchBtn");
+var renderMeal = document.getElementById("render-meal");
 
 searchBTN.addEventListener("click", function () {
   userChoice = genericVar.value.trim();
@@ -16,6 +17,9 @@ function getResults(userChoice) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      var random = Math.floor(Math.random());
+      var returnedRecipe = data.hits[random];
+      console.log(returnedRecipe);
+      renderMeal.textContent = returnedRecipe.recipe.label;
     });
 }
