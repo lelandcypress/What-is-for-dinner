@@ -52,7 +52,7 @@ function getResults(userChoice) {
       return response.json();
     })
     .then(function (data) {
-      var random = Math.floor(Math.random());
+      var random = Math.floor(Math.random() * 20);
       var returnedRecipe = data.hits[random];
       console.log(returnedRecipe);
       renderMeal.textContent = returnedRecipe.recipe.label;
