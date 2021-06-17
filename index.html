@@ -5,17 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-      crossorigin="anonymous"
-    />
-    <link />
     <link rel="stylesheet" href="public/style.css" />
+    <title>What's for Dinner?</title>
+    <link href="assets/style.css" rel="stylesheet" />
   </head>
 
-  <body class="text-red-400">
+  <body class="text-blue-400">
     <header>
       What's for Dinner?
       <h1>Helping individuals create healthy meals.</h1>
@@ -39,20 +34,39 @@
       </ul>
     </div>
 
-    <!-- list meals -->
+    <!--choose drinks-->
+
+    <input type="text" id="drink-search" />
+    <button id="drinkBtn">Find Drink</button>
+
+    <!-- choose meals -->
+
+    <input type="text" id="food-search" />
+    <button id="foodBtn">Find Meal</button>
+    <!--display meal-->
     <div meals="meals-container">
-      <input type="text" id="food-search" placeholder="Beef" />
-      <button id="searchBtn">Search</button>
-      <div id="render-meal"></div>
+      <p id="recipe-title"></p>
+      <img id="recipe-picture" />
+      <ul id="ingredients" class="recipe-list">
+        Ingredients
+      </ul>
+      <ul id="directions" class="recipe-list">
+        Directions
+      </ul>
     </div>
-
-    <!-- add meals to calendar -->
-    <div calendar="calendar-container"></div>
-
+    <!--display cocktail-->
+    <div id="drink-container">
+      <p id="drink-title"></p>
+      <img id="drink-picture" />
+      <ul id="drink-ingredients" class="recipe-list">
+        Cocktail Ingredients
+      </ul>
+      <ul id="mixing" class="recipe-list">
+        Mixing Directions
+      </ul>
+    </div>
     <!-- add the Surprise Me button -->
     <button suprise="btn"></button>
-
-    <!-- add meals to Google Calendar -->
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
