@@ -8,10 +8,10 @@ var riceEl = document.getElementById("rice");
 var potatoesEl = document.getElementById("potatoes");
 var beansEl = document.getElementById("beans");
 var noodlesEl = document.getElementById("noodles");
-
 var container = document.getElementById("main-container");
 var mainTitle = document.getElementById("main-title");
 var mealEL = $("#render-meal");
+var beerPairing = "beef";
 
 // choose protein button
 //proteinbuttonEl.addEventListener("click", starchChoice);
@@ -27,12 +27,28 @@ $("#foodBtn").click(function (event) {
   $("#ingredients").html("");
 });
 
-$("#drinkBtn").click(function (event) {
+$("#ginBtn").click(function (event) {
   event.stopPropagation;
-  userChoice = $("#drink-search").val();
+  userChoice = 11005;
   $("#drink-directions").html("");
   $("#drink-ingredients").html("");
-  getDrinks(userChoice);
+  getGin(userChoice);
+});
+
+$("#vodkaBtn").click(function (event) {
+  event.stopPropagation;
+  userChoice = 14167;
+  $("#drink-directions").html("");
+  $("#drink-ingredients").html("");
+  getVodka(userChoice);
+});
+
+$("#whiskeyBtn").click(function (event) {
+  event.stopPropagation;
+  userChoice = 11001;
+  $("#drink-directions").html("");
+  $("#drink-ingredients").html("");
+  getVodka(userChoice);
 });
 
 $("#beerBtn").click(function (event) {
@@ -41,31 +57,13 @@ $("#beerBtn").click(function (event) {
 });
 
 function getBeer(meal) {
-  var getUrl = "https://api.punkapi.com/v2/beers?food=beef";
+  var getUrl = "https://api.punkapi.com/v2/beers?food=" + beerPairing;
   fetch(getUrl)
     .then(function (beer) {
       return beer.json();
     })
     .then(function (beer) {
-      console.log("food");
-    });
-}
-
-function getDrinks(userChoice) {
-  var getUrl =
-    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + userChoice;
-  fetch(getUrl)
-    .then(function (cocktail) {
-      return cocktail.json();
-    })
-    .then(function (data) {
-      var random = Math.floor(Math.random() * 20);
-      var returnedDrink = data.drinks[random];
-      var drinkImage = returnedDrink.strDrinkThumb;
-      console.log(returnedDrink);
-      $("#drink-title").text(returnedDrink.strDrink);
-      $("#drink-picture").attr("src", drinkImage);
-      getCocktail(drinkID);
+      console.log(beer);
     });
 }
 
