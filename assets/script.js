@@ -45,7 +45,11 @@ function getDrinks(userChoice) {
     .then(function (data) {
       var random = Math.floor(Math.random() * 20);
       var returnedDrink = data.drinks[random];
+      var drinkImage = returnedDrink.strDrinkThumb;
       console.log(returnedDrink);
+      $("#drink-title").text(returnedDrink.strDrink);
+      $("#drink-picture").attr("src", drinkImage);
+      getCocktail(drinkID)
     });
 }
 
