@@ -7,7 +7,6 @@ function getGin(userChoice) {
       return cocktail.json();
     })
     .then(function (data) {
-      console.log(data);
       var returnedDrink = data.drinks[0];
       var drinkImage = returnedDrink.strDrinkThumb;
       $("#drink-title").text(returnedDrink.strDrink);
@@ -47,7 +46,6 @@ function getVodka(userChoice) {
       return cocktail.json();
     })
     .then(function (data) {
-      console.log(data);
       var returnedDrink = data.drinks[0];
       var drinkImage = returnedDrink.strDrinkThumb;
       $("#drink-title").text(returnedDrink.strDrink);
@@ -79,7 +77,7 @@ function getVodka(userChoice) {
     });
 }
 //Whiskey Recipes//
-function getVodka(userChoice) {
+function getWhiskey(userChoice) {
   var getUrl =
     "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + userChoice;
   fetch(getUrl)
@@ -87,7 +85,6 @@ function getVodka(userChoice) {
       return cocktail.json();
     })
     .then(function (data) {
-      console.log(data);
       var returnedDrink = data.drinks[0];
       var drinkImage = returnedDrink.strDrinkThumb;
       $("#drink-title").text(returnedDrink.strDrink);
@@ -96,24 +93,31 @@ function getVodka(userChoice) {
       var mix = data.drinks[0].strInstructions;
       $("#mixing").text(mix);
       $("#drink-ingredients").append(
-        "<p><sp> " +
+        "<p><sp>" +
           ingredients.strMeasure1 +
-          "</sp>" +
+          "</sp> " +
           ingredients.strIngredient1 +
           "</p>"
       );
       $("#drink-ingredients").append(
         "<p><sp> " +
           ingredients.strMeasure2 +
-          "</sp>" +
+          "</sp> " +
           ingredients.strIngredient2 +
           "</p>"
       );
       $("#drink-ingredients").append(
         "<p><sp> " +
           ingredients.strMeasure3 +
-          "</sp>" +
+          "</sp> " +
           ingredients.strIngredient3 +
+          "</p>"
+      );
+      $("#drink-ingredients").append(
+        "<p><sp> " +
+          ingredients.strMeasure4 +
+          "</sp>" +
+          ingredients.strIngredient4 +
           "</p>"
       );
     });
