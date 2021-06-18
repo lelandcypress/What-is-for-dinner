@@ -1,6 +1,8 @@
-@tailwind base;
+.protein-card {
+  width: 200px;
+  height: auto;
+}
 
-@tailwind components;
-
-@tainwind utilities;
-
+.input {
+  width: 160px;
+}
