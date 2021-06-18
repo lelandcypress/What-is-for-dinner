@@ -5,34 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="public/style.css" />
+
     <title>What's for Dinner?</title>
-    <link href="assets/style.css" rel="stylesheet" />
+    <link href="src/style.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class="text-blue-400">
-    <header>
-      What's for Dinner?
-      <h1>Helping individuals create healthy meals.</h1>
+  <body class="text-blue-40">
+    <header class="bg-blue-400">
+      <div class="inline-block">LOGO</div>
+      <ul class="inline-block float-right">
+        <li class="inline-block">HOME</li>
+        <li class="inline-block">ABOUT</li>
+        <li class="inline-block">CONTACT</li>
+      </ul>
     </header>
 
     <!-- choose  your protein -->
-    <div class="proteinsmenu">
-      <ul>
+    <div class="protein-card bg-gray-300 mx-auto rounded px-5 py-5">
+      <div class="flex flex-col">
+        <span class="rounded bg-gray-500 text-center py-5"
+          >Choose your protein</span
+        >
+        <button class="rounded bg-blue-500 text-white px-8 my-2">Beef</button>
+        <button class="rounded bg-blue-500 text-white px-8 my-2">
+          Poultry
+        </button>
+        <button class="rounded bg-blue-500 text-white px-8 my-2">Fish</button>
+        <button class="rounded bg-blue-500 text-white px-8 my-2">Pork</button>
+      </div>
+      <input class="input" type="text" />
+      <!-- <ul>
         <li>Ground Beef</li>
         <li>Chicken</li>
         <li>Fish</li>
         <li>Pork</li>
-      </ul>
+      </ul> -->
+      <!-- Choose your startch-->
     </div>
-
-    <div class="starchmenu">
+    <div class="protein-card bg-gray-400 mx-auto rounded px-5 py-5">
+      <div class="flex flex-col">
+        <span class="rounded bg-gray-500 text-center py-5"
+          >Choose your Starch</span
+        >
+        <button class="rounded bg-blue-500 text-white px-8 my-2">Beef</button>
+        <button class="rounded bg-blue-500 text-white px-8 my-2">
+          Poultry
+        </button>
+        <button class="rounded bg-blue-500 text-white px-8 my-2">Fish</button>
+        <button class="rounded bg-blue-500 text-white px-8 my-2">Pork</button>
+      </div>
+      <input class="input" type="text" />
+    </div>
+    <!-- <div class="starchmenu">
       <ul>
         <li>Rice</li>
         <li>Potatoes</li>
         <li>Noodles</li>
       </ul>
-    </div>
+    </div> -->
 
     <!--choose drinks-->
 
