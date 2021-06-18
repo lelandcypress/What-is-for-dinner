@@ -35,6 +35,22 @@ $("#drinkBtn").click(function (event) {
   getDrinks(userChoice);
 });
 
+$("#beerBtn").click(function (event) {
+  event.stopPropagation;
+  getBeer();
+});
+
+function getBeer(meal) {
+  var getUrl = "https://api.punkapi.com/v2/beers?food=beef";
+  fetch(getUrl)
+    .then(function (beer) {
+      return beer.json();
+    })
+    .then(function (beer) {
+      console.log("food");
+    });
+}
+
 function getDrinks(userChoice) {
   var getUrl =
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + userChoice;
@@ -49,7 +65,7 @@ function getDrinks(userChoice) {
       console.log(returnedDrink);
       $("#drink-title").text(returnedDrink.strDrink);
       $("#drink-picture").attr("src", drinkImage);
-      getCocktail(drinkID)
+      getCocktail(drinkID);
     });
 }
 
