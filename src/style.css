@@ -1,8 +1,22 @@
-.protein-card {
-  width: 200px;
+.card {
+  border-radius: 5px;
+  margin-top: 20px;
+  width: auto;
   height: auto;
+  box-shadow: 1px 1px 5px rgba(28, 17, 31, 0.356);
 }
 
 .input {
   width: 160px;
+}
+
+.pbutton {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.137);
+  height: 150px;
+  width: 150px;
+}
+
+.protein-title {
+  width: 350px;
+  background-color: red;
 }
