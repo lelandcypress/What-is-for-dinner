@@ -83,8 +83,10 @@
 
     <!--choose drinks-->
 
-    <input type="text" id="drink-search" />
-    <button id="drinkBtn">Find Drink</button>
+    <button id="ginBtn">Gin</button>
+    <button id="vodkaBtn">Vodka</button>
+    <button id="whiskeyBtn">Whiskey</button>
+    <button id="beerBtn">Want a Beer?</button>
 
     <!-- choose meals -->
 
@@ -94,26 +96,39 @@
     <div meals="meals-container">
       <p id="recipe-title"></p>
       <img id="recipe-picture" />
+      Ingredients
       <ul id="ingredients" class="recipe-list">
-        Ingredients
       </ul>
+      Directions
       <ul id="directions" class="recipe-list">
-        Directions
       </ul>
     </div>
     <!--display cocktail-->
     <div id="drink-container">
       <p id="drink-title"></p>
       <img id="drink-picture" />
-      <ul id="drink-ingredients" class="recipe-list">
-        Cocktail Ingredients
-      </ul>
+      <p>Cocktail Ingredients</p>
+      <ul id="drink-ingredients" class="recipe-list"></ul>
+        <p>Mixing Directions</p>
       <ul id="mixing" class="recipe-list">
-        Mixing Directions
+      
       </ul>
+   
     </div>
-    <!-- add the Surprise Me button -->
-    <button suprise="btn"></button>
+      <div id="beer-container">
+        <img id="beer-picture" />
+        <p id="beer-title"></p>
+        <p id= "beer-tag"></p>
+        <p id= "beer-abv"></p>
+        <p id= "beer-description"></p>
+        <ul id="beer-pairing"></ul>
+      
+      </ul>
+   
+    </div>  
+
+   
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
@@ -122,5 +137,6 @@
     ></script>
 
     <script src="assets/script.js"></script>
+    <script src="assets/drinks.js"></script>
   </body>
 </html>
