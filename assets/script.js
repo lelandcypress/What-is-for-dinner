@@ -18,26 +18,25 @@ var beerPairing = "beef";
 
 // Starch Choice
 
-<<<<<<< HEAD
 // choose protein button
 
 var buttons = document.getElementsByClassName("button");
-for (var i=0 ; i < buttons.length ; i++){
-  (function(index){
-    buttons[index].onclick = function (){
-       userChoice = (proteinChoice[index]);
-        $("#directions").html("");
-        $("#ingredients").html("");
- 
-        var getUrl =
-           "https://api.spoonacular.com/recipes/findByIngredients?apiKey=61d983d2f15a441c9cde53282684e2f9&ingredients=" +
-          userChoice +
-          "&number=20";
+for (var i = 0; i < buttons.length; i++) {
+  (function (index) {
+    buttons[index].onclick = function () {
+      userChoice = proteinChoice[index];
+      $("#directions").html("");
+      $("#ingredients").html("");
+
+      var getUrl =
+        "https://api.spoonacular.com/recipes/findByIngredients?apiKey=61d983d2f15a441c9cde53282684e2f9&ingredients=" +
+        userChoice +
+        "&number=20";
       fetch(getUrl)
         .then(function (recipe) {
-        return recipe.json();
+          return recipe.json();
         })
-      .then(function (recipe) {
+        .then(function (recipe) {
           var random = Math.floor(Math.random() * 20);
           var returnedRecipe = recipe[random];
           var recipeID = returnedRecipe.id;
@@ -45,26 +44,18 @@ for (var i=0 ; i < buttons.length ; i++){
           $("#recipe-title").text(returnedRecipe.title);
           $("#recipe-picture").attr("src", recipeImage);
           getIngredientList(recipeID);
-    });       
-  };
-   
-  })(i)
-};   
-    
+        });
+    };
+  })(i);
+}
 
+var proteinChoice = ["beef", "chicken", "fish", "pork"];
 
-var proteinChoice = ["beef","chicken","fish","pork"];
-
-
-
-
-
-      // event.stopPropagation;
-      // userChoice = $("#food-search").val();
-      // enterIngredients(userChoice);
-      // $("#directions").html("");
-      // $("#ingredients").html("");
-
+// event.stopPropagation;
+// userChoice = $("#food-search").val();
+// enterIngredients(userChoice);
+// $("#directions").html("");
+// $("#ingredients").html("");
 
 // $("#drinkBtn").click(function (event) {
 
@@ -89,7 +80,6 @@ var proteinChoice = ["beef","chicken","fish","pork"];
 //     });
 // }
 
-=======
 // choose starch button
 $("#foodBtn").click(function (event) {
   event.stopPropagation;
@@ -99,28 +89,12 @@ $("#foodBtn").click(function (event) {
   $("#ingredients").html("");
 });
 
-$("#ginBtn").click(function (event) {
+$(".drink-button").click(function (event) {
   event.stopPropagation;
-  userChoice = 11005;
+  userChoice = event.target;
   $("#drink-directions").html("");
   $("#drink-ingredients").html("");
-  getGin(userChoice);
-});
-
-$("#vodkaBtn").click(function (event) {
-  event.stopPropagation;
-  userChoice = 14167;
-  $("#drink-directions").html("");
-  $("#drink-ingredients").html("");
-  getVodka(userChoice);
-});
-
-$("#whiskeyBtn").click(function (event) {
-  event.stopPropagation;
-  userChoice = 11001;
-  $("#drink-directions").html("");
-  $("#drink-ingredients").html("");
-  getWhiskey(userChoice);
+  getDrink(userChoice.innerHTML);
 });
 
 $("#beerBtn").click(function (event) {
@@ -150,8 +124,6 @@ function getBeer() {
       }
     });
 }
->>>>>>> main
-
 
 function getIngredientList(recipeID) {
   var getUrl =
