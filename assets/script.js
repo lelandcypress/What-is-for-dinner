@@ -27,28 +27,12 @@ $("#foodBtn").click(function (event) {
   $("#ingredients").html("");
 });
 
-$("#ginBtn").click(function (event) {
+$(".drink-button").click(function (event) {
   event.stopPropagation;
-  userChoice = 11005;
+  userChoice = event.target;
   $("#drink-directions").html("");
   $("#drink-ingredients").html("");
-  getGin(userChoice);
-});
-
-$("#vodkaBtn").click(function (event) {
-  event.stopPropagation;
-  userChoice = 14167;
-  $("#drink-directions").html("");
-  $("#drink-ingredients").html("");
-  getVodka(userChoice);
-});
-
-$("#whiskeyBtn").click(function (event) {
-  event.stopPropagation;
-  userChoice = 11001;
-  $("#drink-directions").html("");
-  $("#drink-ingredients").html("");
-  getWhiskey(userChoice);
+  getGin(userChoice.innerHTML);
 });
 
 $("#beerBtn").click(function (event) {
@@ -70,7 +54,6 @@ function getBeer() {
       $("#beer-tag").text(chosenBeer.tagline);
       $("#beer-abv").text("ABV: " + chosenBeer.abv);
       $("#beer-description").text("Description: " + chosenBeer.description);
-      console.log(chosenBeer.food_pairing[1]);
       for (var i = 0; i < chosenBeer.food_pairing.length; i++) {
         $("#beer-pairing").append(
           "<li>" + chosenBeer.food_pairing[i] + "</li>"
