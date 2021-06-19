@@ -2,11 +2,10 @@ var beefEl = document.getElementById("beefbtn");
 var chickenEl = document.getElementById("chickenbtn");
 var fishEl = document.getElementById("fishbtn");
 var porkEl = document.getElementById("porkbtn");
-
 var menuChoice = ["beef", "chicken", "fish", "pork"];
 
 // choose protein button event listeners//
-var meat = document.getElementsByClassName("button");
+var meat = document.getElementsByClassName("meat-button");
 for (var i = 0; i < meat.length; i++) {
   (function (index) {
     meat[index].onclick = function () {
@@ -58,7 +57,7 @@ for (var i = 0; i < meat.length; i++) {
 }
 //Drink Buttons Event Listeners//
 $(".drink-button").click(function (event) {
-  event.stopPropagation;
+  event.stopPropagation();
   userChoice = event.target;
   $("#drink-directions").html("");
   $("#drink-ingredients").html("");
@@ -68,7 +67,7 @@ $(".drink-button").click(function (event) {
 });
 //Had to build out seperate listener since beer comes from a different API than the cocktails//
 $("#beerBtn").click(function (event) {
-  event.stopPropagation;
+  event.stopPropagation();
   $("#beer-container").show();
   $("#drink-container").hide();
   getBeer();
