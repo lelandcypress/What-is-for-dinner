@@ -112,5 +112,51 @@ var drinkChoice = ["gin", "vodka", "whiskey", "beer"];
 // });
 
 // function getDrinks(userChoice) {
+//   var getUrl =
+//     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + userChoice;
+//   fetch(getUrl)
+//     .then(function (cocktail) {
+//       return cocktail.json();
+//     })
+//     .then(function (data) {
+//       var random = Math.floor(Math.random() * 20);
+//       var returnedDrink = data.drinks[random];
+//       console.log(returnedDrink);
+//     });
+// }
 
-// function getIngredientList(recipeID) {
+$(".drink-button").click(function (event) {
+  event.stopPropagation;
+  userChoice = event.target;
+  $("#drink-directions").html("");
+  $("#drink-ingredients").html("");
+  getDrink(userChoice.innerHTML);
+});
+
+$("#beerBtn").click(function (event) {
+  event.stopPropagation;
+  getBeer();
+});
+
+function getBeer() {
+  var getUrl = "https://api.punkapi.com/v2/beers?food/random";
+  fetch(getUrl)
+    .then(function (beer) {
+      return beer.json();
+    })
+    .then(function (beer) {
+      var random = Math.floor(Math.random() * 20);
+      var chosenBeer = beer[random];
+      $("#beer-picture").attr("src", chosenBeer.image_url);
+      $("#beer-title").text(chosenBeer.name);
+      $("#beer-tag").text(chosenBeer.tagline);
+      $("#beer-abv").text("ABV: " + chosenBeer.abv);
+      $("#beer-description").text("Description: " + chosenBeer.description);
+      console.log(chosenBeer.food_pairing[1]);
+      for (var i = 0; i < chosenBeer.food_pairing.length; i++) {
+        $("#beer-pairing").append(
+          "<li>" + chosenBeer.food_pairing[i] + "</li>"
+        );
+      }
+    });
+}
