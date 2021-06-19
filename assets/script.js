@@ -8,16 +8,17 @@ var riceEl = document.getElementById("rice");
 var potatoesEl = document.getElementById("potatoes");
 var beansEl = document.getElementById("beans");
 var noodlesEl = document.getElementById("noodles");
-
 var container = document.getElementById("main-container");
 var mainTitle = document.getElementById("main-title");
 var mealEL = $("#render-meal");
+var beerPairing = "beef";
 
 // choose protein button
 //proteinbuttonEl.addEventListener("click", starchChoice);
 
 // Starch Choice
 
+<<<<<<< HEAD
 // choose protein button
 
 var buttons = document.getElementsByClassName("button");
@@ -88,6 +89,68 @@ var proteinChoice = ["beef","chicken","fish","pork"];
 //     });
 // }
 
+=======
+// choose starch button
+$("#foodBtn").click(function (event) {
+  event.stopPropagation;
+  userChoice = $("#food-search").val();
+  enterIngredients(userChoice);
+  $("#directions").html("");
+  $("#ingredients").html("");
+});
+
+$("#ginBtn").click(function (event) {
+  event.stopPropagation;
+  userChoice = 11005;
+  $("#drink-directions").html("");
+  $("#drink-ingredients").html("");
+  getGin(userChoice);
+});
+
+$("#vodkaBtn").click(function (event) {
+  event.stopPropagation;
+  userChoice = 14167;
+  $("#drink-directions").html("");
+  $("#drink-ingredients").html("");
+  getVodka(userChoice);
+});
+
+$("#whiskeyBtn").click(function (event) {
+  event.stopPropagation;
+  userChoice = 11001;
+  $("#drink-directions").html("");
+  $("#drink-ingredients").html("");
+  getWhiskey(userChoice);
+});
+
+$("#beerBtn").click(function (event) {
+  event.stopPropagation;
+  getBeer();
+});
+
+function getBeer() {
+  var getUrl = "https://api.punkapi.com/v2/beers?food/random";
+  fetch(getUrl)
+    .then(function (beer) {
+      return beer.json();
+    })
+    .then(function (beer) {
+      var random = Math.floor(Math.random() * 20);
+      var chosenBeer = beer[random];
+      $("#beer-picture").attr("src", chosenBeer.image_url);
+      $("#beer-title").text(chosenBeer.name);
+      $("#beer-tag").text(chosenBeer.tagline);
+      $("#beer-abv").text("ABV: " + chosenBeer.abv);
+      $("#beer-description").text("Description: " + chosenBeer.description);
+      console.log(chosenBeer.food_pairing[1]);
+      for (var i = 0; i < chosenBeer.food_pairing.length; i++) {
+        $("#beer-pairing").append(
+          "<li>" + chosenBeer.food_pairing[i] + "</li>"
+        );
+      }
+    });
+}
+>>>>>>> main
 
 
 function getIngredientList(recipeID) {

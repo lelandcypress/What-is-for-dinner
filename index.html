@@ -5,11 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="public/style.css" />
-    <title>What's for Dinner?</title>
-    <link href="assets/style.css" rel="stylesheet" />
-  </head>
 
+    <title>What's for Dinner?</title>
+    <link href="src/style.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+<p class="beefDisplay"></p>
+  
+
+
+
+<<<<<<< HEAD
+<body class="text-blue-40">
+    <header class="bg-blue-400">
+      <div class="inline-block">LOGO</div>
+      <ul class="inline-block float-right">
+        <li class="inline-block">HOME</li>
+        <li class="inline-block">ABOUT</li>
+        <li class="inline-block">CONTACT</li>
+      </ul>
+=======
 <<<<<<< HEAD
  
   <body>
@@ -19,31 +37,56 @@
     <header>
       What's for Dinner?
       <h1>Helping individuals create healthy meals.</h1>
+>>>>>>> thomas
     </header>
 >>>>>>> main
 
     <!-- choose  your protein -->
-    <div class="proteinsmenu">
-      <ul>
+    <div class="protein-card bg-gray-300 mx-auto rounded px-5 py-5">
+      
+      <div class="flex flex-col">
+        
+        <span class="rounded bg-gray-500 text-center py-5"
+          >Choose your protein</span>
+        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="beefbtn">Beef</button>
+        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="chickenbtn">Chicken</button>
+        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="fishbtn">Fish</button>
+        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="porkbtn">Pork</button>
+      
+      </div>
+      <!-- <input class="input" type="text" /> -->
+      <!-- <ul>
         <li>Ground Beef</li>
         <li>Chicken</li>
         <li>Fish</li>
         <li>Pork</li>
-      </ul>
+      </ul> -->
+      <!-- Choose your startch-->
     </div>
-
-    <div class="starchmenu">
+    <div class="protein-card bg-gray-400 mx-auto rounded px-5 py-5">
+      <div class="flex flex-col">
+        <span class="rounded bg-gray-500 text-center py-5">Choose your Beverage</span>
+        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="beerbtn">Beer</button>
+        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="winebtn">Wine</button>
+        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="sodabtn">Soda Pop</button>
+        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="juicebtn">Juice</button>
+      </div>
+      <input class="input" type="text" />
+    </div>
+    <!-- <div class="starchmenu">
       <ul>
         <li>Rice</li>
         <li>Potatoes</li>
         <li>Noodles</li>
       </ul>
-    </div>
+    </div> -->
 
     <!--choose drinks-->
 
-    <input type="text" id="drink-search" />
-    <button id="drinkBtn">Find Drink</button>
+    <button id="ginBtn">Gin</button>
+    <button id="vodkaBtn">Vodka</button>
+    <button id="whiskeyBtn">Whiskey</button>
+    <button id="beerBtn">Want a Beer?</button>
 
     <!-- choose meals -->
 
@@ -53,26 +96,39 @@
     <div meals="meals-container">
       <p id="recipe-title"></p>
       <img id="recipe-picture" />
+      Ingredients
       <ul id="ingredients" class="recipe-list">
-        Ingredients
       </ul>
+      Directions
       <ul id="directions" class="recipe-list">
-        Directions
       </ul>
     </div>
     <!--display cocktail-->
     <div id="drink-container">
       <p id="drink-title"></p>
       <img id="drink-picture" />
-      <ul id="drink-ingredients" class="recipe-list">
-        Cocktail Ingredients
-      </ul>
+      <p>Cocktail Ingredients</p>
+      <ul id="drink-ingredients" class="recipe-list"></ul>
+        <p>Mixing Directions</p>
       <ul id="mixing" class="recipe-list">
-        Mixing Directions
+      
       </ul>
+   
     </div>
-    <!-- add the Surprise Me button -->
-    <button suprise="btn"></button>
+      <div id="beer-container">
+        <img id="beer-picture" />
+        <p id="beer-title"></p>
+        <p id= "beer-tag"></p>
+        <p id= "beer-abv"></p>
+        <p id= "beer-description"></p>
+        <ul id="beer-pairing"></ul>
+      
+      </ul>
+   
+    </div>  
+
+   
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
@@ -81,5 +137,6 @@
     ></script>
 
     <script src="assets/script.js"></script>
+    <script src="assets/drinks.js"></script>
   </body>
 </html>
