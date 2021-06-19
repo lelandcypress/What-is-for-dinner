@@ -14,9 +14,6 @@
     />
   </head>
 <p class="beefDisplay"></p>
-  
-
-
 
 <body class="">
     <header class="bg-blue-400 h-9">
@@ -27,6 +24,7 @@
         <li class="inline-block">CONTACT</li>
       </ul>
     </header>
+
     <section class="flex flex-wrap">
     <!----CHOOSE YOUR PROTEIN -->
     <div class="card mx-auto px-5 py-5">
@@ -44,9 +42,11 @@
             <button class="pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="porkbtn"><img src="img/pork.png" alt="pork logo" class=" h-8 w-8">
               <p>Pork</p></button>
         </div>
+
         
       
       </div>
+
       
     </div>
 
@@ -57,13 +57,13 @@
           <div class="rounded text-center py-5 border-b-2 border-black-600">CHOOSE YOUR DRINK</div>
 
         <div class=" grid grid-cols-2 gap-1">
-            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500  " type="submit" id="ginBtn"><img src="img/gin.png" alt="gin logo" class=" h-8 w-8">
+            <button id="ginBtn class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500  " type="submit" id="ginBtn"><img src="img/gin.png" alt="gin logo" class=" h-8 w-8">
               <p>GIN</p></button>  
-            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="vodkanBtn"><img src="img/vodka.png" alt="vodka logo" class=" h-8 w-8">
+            <button id="vodkaBtn" class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="vodkanBtn"><img src="img/vodka.png" alt="vodka logo" class=" h-8 w-8">
               <p>VODKA</p></button>
-            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500" type="submit" id="whiskeyBtn"><img src="img/whiskey.png" alt="whiskey logo" class=" h-8 w-8">
-              <p>WHISKEY</p></button>
-            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="beerBtn"><img src="img/beer.png" alt="beer logo" class=" h-8 w-8">
+            <button id="tequilaBtn"  class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500" type="submit" id="whiskeyBtn"><img src="img/whiskey.png" alt="whiskey logo" class=" h-8 w-8">
+              <p>TEQUILA</p></button>
+            <button id="beerBtn" class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="beerBtn"><img src="img/beer.png" alt="beer logo" class=" h-8 w-8">
               <p>BEER</p></button>
         </div>
        </div>
@@ -79,6 +79,12 @@
 
     <!-- <input type="text" id="food-search" />
     <button id="foodBtn">Find Meal</button> -->
+
+    
+   
+  
+  
+
     <!--display meal-->
     <div meals="meals-container">
       <p id="recipe-title"></p>
@@ -90,7 +96,7 @@
       <ul id="directions" class="recipe-list">
       </ul>
     </div>
-    <!--display cocktail-->
+    <!--display drink-->
     <div id="drink-container">
       <p id="drink-title"></p>
       <img id="drink-picture" />
@@ -113,10 +119,7 @@
       
       </ul>
    
-    </div>  
-
-   
-    </div>
+   </div>  
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
@@ -126,6 +129,6 @@
 
     <script src="assets/script.js"></script>
     <script src="assets/drinks.js"></script>
-        <script src="assets/food.js"></script>
+       
   </body>
 </html>
