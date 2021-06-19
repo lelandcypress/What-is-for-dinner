@@ -18,8 +18,8 @@
 
 
 
-<body class="text-blue-40">
-    <header class="bg-blue-400">
+<body class="">
+    <header class="bg-blue-400 h-9">
       <div class="inline-block">LOGO</div>
       <ul class="inline-block float-right">
         <li class="inline-block">HOME</li>
@@ -27,59 +27,54 @@
         <li class="inline-block">CONTACT</li>
       </ul>
     </header>
-
-    <!-- choose  your protein -->
-    <div class="protein-card bg-gray-300 mx-auto rounded px-5 py-5">
+    <section class="flex flex-wrap">
+    <!----CHOOSE YOUR PROTEIN -->
+    <div class="card mx-auto px-5 py-5">
       
-      <div class="flex flex-col">
+      <div class="grid grid-rows-1">
+        <div class="p-5 text-center border-b-2 border-black-600">CHOOSE YOUR PROTEIN</div>
         
-        <span class="rounded bg-gray-500 text-center py-5"
-          >Choose your protein</span>
-        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="beefbtn">Beef</button>
-        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="chickenbtn">Chicken</button>
-        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="fishbtn">Fish</button>
-        <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="porkbtn">Pork</button>
+        <div class=" grid grid-cols-2 gap-1">
+            <button class="pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500  " type="submit" id="beefbtn"><img src="img/beef.png" alt="beef logo" class=" h-8 w-8">
+              <p>Beef</p></button>  
+            <button class="pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="chickenbtn"><img src="img/chicken.png" alt="chicken logo" class=" h-8 w-8">
+              <p>Chicken</p></button>
+            <button class="pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500" type="submit" id="fishbtn"><img src="img/fish.png" alt="fish logo" class=" h-8 w-8">
+              <p>Fish</p></button>
+            <button class="pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="porkbtn"><img src="img/pork.png" alt="pork logo" class=" h-8 w-8">
+              <p>Pork</p></button>
+        </div>
+        
       
       </div>
-      <!-- <input class="input" type="text" /> -->
-      <!-- <ul>
-        <li>Ground Beef</li>
-        <li>Chicken</li>
-        <li>Fish</li>
-        <li>Pork</li>
-      </ul> -->
-      <!-- Choose your startch-->
+      
     </div>
-    <div class="protein-card bg-gray-400 mx-auto rounded px-5 py-5">
-      <div class="flex flex-col">
-        <span class="rounded bg-gray-500 text-center py-5">Choose your Beverage</span>
-        <button class="buttons rounded bg-blue-500 text-white px-8 my-2" type="submit" id="ginbtn">Gin</button>
-        <button class="buttons rounded bg-blue-500 text-white px-8 my-2" type="submit" id="vodkabtn">Vodka</button>
-        <button class="buttons rounded bg-blue-500 text-white px-8 my-2" type="submit" id="whiskeybtn">Whiskey</button>
-        <button class="buttons rounded bg-blue-500 text-white px-8 my-2" type="submit" id="beerbtn">Beer</button>
-      </div>
-      <input class="input" type="text" />
-    </div>
-    <!-- <div class="starchmenu">
-      <ul>
-        <li>Rice</li>
-        <li>Potatoes</li>
-        <li>Noodles</li>
-      </ul>
-    </div> -->
 
-    <!--choose drinks-->
-    <div class ="drink-card protein-card bg-gray-400 mx-auto rounded px-5 py-5">
-    <div class="flex flex-col">
-      <span class="rounded bg-gray-500 text-center py-5"
-          >Want a Drink?</span
-        >
-      <button id="ginBtn" class = "drink-button rounded bg-blue-500 text-white px-8 my-2">Gin</button>
-    <button id="vodkaBtn" class = "drink-button rounded bg-blue-500 text-white px-8 my-2">Vodka</button>
-    <button id="tequilaBtn" class = "drink-button rounded bg-blue-500 text-white px-8 my-2">Tequila</button>
-    <button id="beerBtn" class = "rounded bg-blue-500 text-white px-8 my-2">Beer</button>
-    </div>
+    <!----CHOOSE YOUR BEVERAGE -->
+      <div class="card mx-auto px-5 py-5">
+        
+        <div class="grid grid-rows-1">
+          <div class="rounded text-center py-5 border-b-2 border-black-600">CHOOSE YOUR DRINK</div>
+
+        <div class=" grid grid-cols-2 gap-1">
+            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500  " type="submit" id="ginBtn"><img src="img/gin.png" alt="gin logo" class=" h-8 w-8">
+              <p>GIN</p></button>  
+            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="vodkanBtn"><img src="img/vodka.png" alt="vodka logo" class=" h-8 w-8">
+              <p>VODKA</p></button>
+            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500" type="submit" id="whiskeyBtn"><img src="img/whiskey.png" alt="whiskey logo" class=" h-8 w-8">
+              <p>WHISKEY</p></button>
+            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="beerBtn"><img src="img/beer.png" alt="beer logo" class=" h-8 w-8">
+              <p>BEER</p></button>
+        </div>
+       </div>
+          
+          
       </div>
+    </section>
+
+
+
+
     <!-- choose meals -->
 
     <!-- <input type="text" id="food-search" />
