@@ -1,4 +1,4 @@
-function getGin(userChoice) {
+function getDrink(userChoice) {
   var getUrl =
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + userChoice;
   fetch(getUrl)
@@ -48,5 +48,27 @@ function getRecipe(drinkID) {
       });
       var mix = results.drinks[0].strInstructions;
       $("#mixing").text(mix);
+    });
+}
+
+function getBeer() {
+  var getUrl = "https://api.punkapi.com/v2/beers?food/random";
+  fetch(getUrl)
+    .then(function (beer) {
+      return beer.json();
+    })
+    .then(function (beer) {
+      var random = Math.floor(Math.random() * 20);
+      var chosenBeer = beer[random];
+      $("#beer-picture").attr("src", chosenBeer.image_url);
+      $("#beer-title").text(chosenBeer.name);
+      $("#beer-tag").text(chosenBeer.tagline);
+      $("#beer-abv").text("ABV: " + chosenBeer.abv);
+      $("#beer-description").text("Description: " + chosenBeer.description);
+      for (var i = 0; i < chosenBeer.food_pairing.length; i++) {
+        $("#beer-pairing").append(
+          "<li>" + chosenBeer.food_pairing[i] + "</li>"
+        );
+      }
     });
 }
