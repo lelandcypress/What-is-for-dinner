@@ -14,9 +14,6 @@
     />
   </head>
 <p class="beefDisplay"></p>
-  
-
-
 
 <body class="text-blue-40">
     <header class="bg-blue-400">
@@ -29,8 +26,7 @@
     </header>
 
     <!-- choose  your protein -->
-    <div class="protein-card bg-gray-300 mx-auto rounded px-5 py-5">
-      
+    <div class="main-card bg-gray-300 mx-auto rounded px-5 py-5">
       <div class="flex flex-col">
         
         <span class="rounded bg-gray-500 text-center py-5"
@@ -41,33 +37,7 @@
         <button class="button rounded bg-blue-500 text-white px-8 my-2" type="submit" id="porkbtn">Pork</button>
       
       </div>
-      <!-- <input class="input" type="text" /> -->
-      <!-- <ul>
-        <li>Ground Beef</li>
-        <li>Chicken</li>
-        <li>Fish</li>
-        <li>Pork</li>
-      </ul> -->
-      <!-- Choose your startch-->
-    </div>
-    <div class="protein-card bg-gray-400 mx-auto rounded px-5 py-5">
-      <div class="flex flex-col">
-        <span class="rounded bg-gray-500 text-center py-5">Choose your Beverage</span>
-        <button class="buttons rounded bg-blue-500 text-white px-8 my-2" type="submit" id="ginbtn">Gin</button>
-        <button class="buttons rounded bg-blue-500 text-white px-8 my-2" type="submit" id="vodkabtn">Vodka</button>
-        <button class="buttons rounded bg-blue-500 text-white px-8 my-2" type="submit" id="whiskeybtn">Whiskey</button>
-        <button class="buttons rounded bg-blue-500 text-white px-8 my-2" type="submit" id="beerbtn">Beer</button>
-      </div>
-      <input class="input" type="text" />
-    </div>
-    <!-- <div class="starchmenu">
-      <ul>
-        <li>Rice</li>
-        <li>Potatoes</li>
-        <li>Noodles</li>
-      </ul>
-    </div> -->
-
+    
     <!--choose drinks-->
     <div class ="drink-card protein-card bg-gray-400 mx-auto rounded px-5 py-5">
     <div class="flex flex-col">
@@ -80,10 +50,10 @@
     <button id="beerBtn" class = "rounded bg-blue-500 text-white px-8 my-2">Beer</button>
     </div>
       </div>
-    <!-- choose meals -->
-
-    <!-- <input type="text" id="food-search" />
-    <button id="foodBtn">Find Meal</button> -->
+    
+    </div>
+  
+  
     <!--display meal-->
     <div meals="meals-container">
       <p id="recipe-title"></p>
@@ -95,7 +65,7 @@
       <ul id="directions" class="recipe-list">
       </ul>
     </div>
-    <!--display cocktail-->
+    <!--display drink-->
     <div id="drink-container">
       <p id="drink-title"></p>
       <img id="drink-picture" />
@@ -118,10 +88,7 @@
       
       </ul>
    
-    </div>  
-
-   
-    </div>
+   </div>  
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
@@ -131,6 +98,6 @@
 
     <script src="assets/script.js"></script>
     <script src="assets/drinks.js"></script>
-        <script src="assets/food.js"></script>
+       
   </body>
 </html>
