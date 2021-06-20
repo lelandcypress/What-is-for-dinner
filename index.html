@@ -13,12 +13,8 @@
       rel="stylesheet"
     />
   </head>
-<p class="beefDisplay"></p>
-  
-
-
-
 <body class="">
+  <!--HEADER-->
     <header class="bg-blue-400 h-9">
       <div class="inline-block">LOGO</div>
       <ul class="inline-block float-right">
@@ -27,13 +23,12 @@
         <li class="inline-block">CONTACT</li>
       </ul>
     </header>
-    <section class="flex flex-wrap">
+    <!-- MAIN SECTION-->
+    <section class="flex flex-wrap lg:grid grid-cols-2 lg:grid-rows-2">
     <!----CHOOSE YOUR PROTEIN -->
     <div class="card mx-auto px-5 py-5">
-      
       <div class="grid grid-rows-1">
         <div class="p-5 text-center border-b-2 border-black-600">CHOOSE YOUR PROTEIN</div>
-        
         <div class=" grid grid-cols-2 gap-1">
             <button class="pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500  " type="submit" id="beefbtn"><img src="img/beef.png" alt="beef logo" class=" h-8 w-8">
               <p>Beef</p></button>  
@@ -44,108 +39,58 @@
             <button class="pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="porkbtn"><img src="img/pork.png" alt="pork logo" class=" h-8 w-8">
               <p>Pork</p></button>
         </div>
-        
-      
       </div>
-      
     </div>
-
-    <!----CHOOSE YOUR BEVERAGE -->
       <!-- FOOD PREPVIEW-->
-      <div class="flex flex-col card mx-auto px-5 py-5 h-auto">
-        <span class="text-center">✨ YOUR CHOSEN DINNER IS ✨</span>
-        <div meals="meals-container">
-          <p id="recipe-title"></p>
-          <img src="img/chickentemp.png" id="recipe-picture" />
-          Ingredients
-          <ul id="ingredients" class="recipe-list">
-           <li>Chicken boneless (cubed)-200gm</li>
-           <li>Granulated dashi-1tsp or Chicken broth cube-1</li>
-           <li>Hon mirin-1tbsp or Rice wine-1tbsp</li>
-           <li>Salt and Pepper to taste</li>
-           <li>Spring onions greens (chopped)-2tbsp</li>
-           <li>Udon frozen noodles (cooked)-2cups</li>
-           <li>Tempura Batter-Cold water, All purpose flour-1/2cup, Egg-1,
-            Water-3cups</li>
-           <li>Soysauce-2tsp</li>
-          </ul>
-          Directions
-          <!-- <ul id="directions" class="recipe-list"></ul> -->
-        </div>
-      </div>
-
-  <p class="beefDisplay"></p>
-
-  <body class="">
-    <section class="flex flex-wrap lg:grid grid-cols-2 lg:grid-rows-2">
-      
-      <!----CHOOSE YOUR BEVERAGE -->
+ <div class="flex flex-col card mx-auto px-5 py-5 h-auto">
+  <span class="text-center">✨ YOUR CHOSEN DINNER IS ✨</span>
+    <div meals="meals-container">
+        <p id="recipe-title"></p>
+        <img src="" id="recipe-picture" />
+        Ingredients
+        <ul id="ingredients" class="recipe-list">
+    </div>
+</div>
+    <!----CHOOSE YOUR BEVERAGE -->
       <div class="card mx-auto px-5 py-5">
-        
         <div class="grid grid-rows-1">
           <div class="rounded text-center py-5 border-b-2 border-black-600">CHOOSE YOUR DRINK</div>
 
         <div class=" grid grid-cols-2 gap-1">
             <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500  " type="submit" id="ginBtn"><img src="img/gin.png" alt="gin logo" class=" h-8 w-8">
-              <p>GIN</p></button>  
+              <p>Gin</p></button>  
             <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="vodkanBtn"><img src="img/vodka.png" alt="vodka logo" class=" h-8 w-8">
-              <p>VODKA</p></button>
+              <p>Vodka</p></button>
             <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500" type="submit" id="whiskeyBtn"><img src="img/whiskey.png" alt="whiskey logo" class=" h-8 w-8">
-              <p>WHISKEY</p></button>
+              <p>Whiskey</p></button>
             <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="beerBtn"><img src="img/beer.png" alt="beer logo" class=" h-8 w-8">
-              <p>BEER</p></button>
+              <p>Beer</p></button>
         </div>
        </div>
-          
-          
       </div>
+
+      <!-- PREVIEW BEVERAGE-->
+      <div id="beer-container" class="flex flex-col card mx-auto px-5 py-5 prev ">
+        <span class="text-center">✨ YOUR CHOSEN BEVERAGE IS ✨</span>
+        <div>
+          <img id="beer-picture" class="beer-img rotate" src="" />
+        </div>
+        <div>
+          <p id="beer-title" class="beer-title text-center text-6xl"></p>
+          <p id="beer-description" class="text-justify pt-5"></p>
+        </div>
+      </div>
+
     </section>
 
 
 
 
-    <!-- choose meals -->
+    
 
-    <!-- <input type="text" id="food-search" />
-    <button id="foodBtn">Find Meal</button> -->
-    <!--display meal-->
-    <div meals="meals-container">
-      <p id="recipe-title"></p>
-      <img id="recipe-picture" />
-      Ingredients
-      <ul id="ingredients" class="recipe-list">
-      </ul>
-      Directions
-      <ul id="directions" class="recipe-list">
-      </ul>
-    </div>
-    <!--display cocktail-->
-    <div id="drink-container">
-      <p id="drink-title"></p>
-      <img id="drink-picture" />
-      <p>Cocktail Ingredients</p>
-      <ul id="drink-ingredients" class="recipe-list"></ul>
-        <p>Mixing Directions</p>
-      <ul id="mixing" class="recipe-list">
-      
-      </ul>
-   
-    </div>
-      <div id="beer-container">
-        <img id="beer-picture" />
-        <p id="beer-title"></p>
-        <p id= "beer-tag"></p>
-        <p id= "beer-abv"></p>
-        <p id= "beer-description"></p>
-        
-        <ul id="beer-pairing"></ul>
-      
-      </ul>
-   
-    </div>  
-
-   
-    </div>
+  
+  
+    
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
