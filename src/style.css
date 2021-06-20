@@ -1,3 +1,10 @@
+/* font-family: 'Quattrocento', serif    (HEADER); 
+  font-family: 'Nunito Sans', sans-serif (h2);
+  font-family: 'Numans', sans-serif  (p);
+  
+  
+  */
+
 .card {
   border-radius: 5px;
   margin-top: 20px;
@@ -19,4 +26,40 @@
 .protein-title {
   width: 350px;
   background-color: red;
+}
+
+.hero {
+  width: 100%;
+  height: 400px;
+}
+
+.ul {
+  margin-right: 20px;
+}
+.ul li {
+  color: white;
+}
+
+.titlecard {
+  font-family: 'Quattrocento', sans-serif;
+}
+
+.p {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.hero {
+  background-image: ;
+}
+
+.holder {
+  display: flex;
+  background-color: red;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.beer-img {
+  width: 100px;
+  height: 300px;
 }
