@@ -1,41 +1,28 @@
-var proteinbuttonEl = document.getElementById("proteinbutton");
-var starchbuttonEl = document.getElementById("starchbutton");
 var beefEl = document.getElementById("beefbtn");
 var chickenEl = document.getElementById("chickenbtn");
 var fishEl = document.getElementById("fishbtn");
 var porkEl = document.getElementById("porkbtn");
-var riceEl = document.getElementById("rice");
-var potatoesEl = document.getElementById("potatoes");
-var beansEl = document.getElementById("beans");
-var noodlesEl = document.getElementById("noodles");
+var menuChoice = ["beef", "chicken", "fish", "pork"];
 
-var container = document.getElementById("main-container");
-var mainTitle = document.getElementById("main-title");
-var mealEL = $("#render-meal");
-
-// choose protein button
-//proteinbuttonEl.addEventListener("click", starchChoice);
-
-// Starch Choice
-
-// choose protein button
-var meat = document.getElementsByClassName("button");
+// choose protein button event listeners//
+var meat = document.getElementsByClassName("meat-button");
 for (var i = 0; i < meat.length; i++) {
   (function (index) {
     meat[index].onclick = function () {
       userChoice = menuChoice[index];
+      //clears inner HTML to prevent search items from stacking//
       $("#directions").html("");
       $("#ingredients").html("");
-
+      //First fetch request to Spoonacular API, searches by ingredient name//
       var getUrl =
-        "https://api.spoonacular.com/recipes/findByIngredients?apiKey=61d983d2f15a441c9cde53282684e2f9&ingredients=" +
+        "https://api.spoonacular.com/recipes/findByIngredients?apiKey=8cc43afd180940aba414f655f8a71f64&ingredients=" +
         userChoice +
         "&number=20";
       fetch(getUrl)
         .then(function (recipe) {
           return recipe.json();
         })
-
+        //returns a random option from the returned recipes, renders recipe title and picture assigns recipe ID//
         .then(function (recipe) {
           var random = Math.floor(Math.random() * 20);
           var returnedRecipe = recipe[random];
@@ -43,12 +30,11 @@ for (var i = 0; i < meat.length; i++) {
           var recipeImage = returnedRecipe.image;
           $("#recipe-title").text(returnedRecipe.title);
           $("#recipe-picture").attr("src", recipeImage);
-          // getIngredientList(recipeID);
-
+          //Second fetch request returns ingredient list and recipe directions.//
           var getrecipeUrl =
             "https://api.spoonacular.com/recipes/" +
             recipeID +
-            "/information?apiKey=61d983d2f15a441c9cde53282684e2f9&includeNutrition=true";
+            "/information?apiKey=8cc43afd180940aba414f655f8a71f64&includeNutrition=true";
           fetch(getrecipeUrl)
             .then(function (response) {
               return response.json();
@@ -69,94 +55,21 @@ for (var i = 0; i < meat.length; i++) {
     };
   })(i);
 }
-
-var menuChoice = ["beef", "chicken", "fish", "pork"];
-var drinkChoice = ["gin", "vodka", "whiskey", "beer"];
-
-// event.stopPropagation;
-// userChoice = $("#food-search").val();
-// enterIngredients(userChoice);
-// $("#directions").html("");
-// $("#ingredients").html("");
-
-// $("#drinkBtn").click(function (event) {
-
-// var drink = document.getElementsByClassName("buttons");
-// for (var i = 0; i < drink.length; i++) {
-//   (function (index) {
-//     drink[index].onclick = function () {
-//       drinksChoice = drinkChoice[index];
-//       $("#drink-directions").html("");
-//       $("#drink-ingredients").html("");
-//       console.log(drinksChoice);
-
-//       var getUrl =
-//         "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" +
-//         drinksChoice;
-//       fetch(getUrl)
-//         .then(function (cocktail) {
-//           return cocktail.json();
-//         })
-//         .then(function (data) {
-//           var random = Math.floor(Math.random() * 20);
-//           var returnedDrink = data.drinks[random];
-//           console.log(returnedDrink);
-//         })
-//     }
-//   })(i)
-// };
-
-//     event.stopPropagation;
-//   userChoice = $("#drink-search").val();
-
-// });
-
-// function getDrinks(userChoice) {
-//   var getUrl =
-//     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + userChoice;
-//   fetch(getUrl)
-//     .then(function (cocktail) {
-//       return cocktail.json();
-//     })
-//     .then(function (data) {
-//       var random = Math.floor(Math.random() * 20);
-//       var returnedDrink = data.drinks[random];
-//       console.log(returnedDrink);
-//     });
-// }
-
+//Drink Buttons Event Listeners//
 $(".drink-button").click(function (event) {
-  event.stopPropagation;
+  event.stopPropagation();
   userChoice = event.target;
   $("#drink-directions").html("");
   $("#drink-ingredients").html("");
+  $("#drink-container").show();
+  $("#beer-container").hide();
   getDrink(userChoice.innerHTML);
 });
-
+//Had to build out seperate listener since beer comes from a different API than the cocktails//
 $("#beerBtn").click(function (event) {
-  event.stopPropagation;
+  event.stopPropagation();
+  $("#beer-container").show();
+  $("#drink-container").hide();
   getBeer();
 });
-
-function getBeer() {
-  var getUrl = "https://api.punkapi.com/v2/beers?food/random";
-  fetch(getUrl)
-    .then(function (beer) {
-      return beer.json();
-    })
-    .then(function (beer) {
-      var random = Math.floor(Math.random() * 20);
-      var chosenBeer = beer[random];
-      $("#beer-picture").attr("src", chosenBeer.image_url);
-      $("#beer-title").text(chosenBeer.name);
-      $("#beer-tag").text(chosenBeer.tagline);
-      $("#beer-abv").text("ABV: " + chosenBeer.abv);
-      $("#beer-description").text("Description: " + chosenBeer.description);
-      console.log(chosenBeer.food_pairing[1]);
-      for (var i = 0; i < chosenBeer.food_pairing.length; i++) {
-        $("#beer-pairing").append(
-          "<li>" + chosenBeer.food_pairing[i] + "</li>"
-        );
-      }
-    });
-}
+//Note: all cocktail and beer fucitions found on drinks.js

@@ -1,3 +1,4 @@
+//User selects cocktail choice requires two fetch requests to render details by ingredients//
 function getDrink(userChoice) {
   var getUrl =
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + userChoice;
@@ -16,6 +17,7 @@ function getDrink(userChoice) {
       getRecipe(drinkID);
     });
 }
+//Second cocktail fetch request//
 function getRecipe(drinkID) {
   var getUrl =
     "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkID;
@@ -24,7 +26,8 @@ function getRecipe(drinkID) {
       return cocktail.json();
     })
     .then(function (results) {
-      console.log(results);
+      //Method used to add ingredients list from API into an array so developer could use for-loop//
+      //Credit: Stack Overflow//
       results.drinks.forEach((drink) => {
         var drinkEntries = Object.entries(drink),
           ingredientsArray = drinkEntries
@@ -39,7 +42,7 @@ function getRecipe(drinkID) {
                 key.startsWith("strMeasure") && value && value.trim()
             )
             .map(([key, value]) => value);
-
+        //Dynamically populates ingredients and measures//
         for (var i = 0; i < ingredientsArray.length; i++) {
           $("#drink-ingredients").append(
             "<li>" + measuresArray[i] + " " + ingredientsArray[i] + "</li>"
@@ -50,7 +53,7 @@ function getRecipe(drinkID) {
       $("#mixing").text(mix);
     });
 }
-
+//Beer Button Function//
 function getBeer() {
   var getUrl = "https://api.punkapi.com/v2/beers?food/random";
   fetch(getUrl)
