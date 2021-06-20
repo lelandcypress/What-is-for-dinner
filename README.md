@@ -3,7 +3,7 @@
 Description:
 Have you ever asked a friend or loved one what they want for dinner? Ever need help making a decision for what to make for dinner? This app helps eliminate guesswork by guiding you towards dinner and drink recipes based on your preference. We want to help our users plan a great evening by presenting great ideas for dinner and drinks. We want to scale this application to expand beyond recipes and branch out into restaurants and breweries.
 
-## User story
+### User story
 
 ```
 
@@ -16,11 +16,11 @@ I want each recipe to display required ingredients
 I want each recipe to display instructions for creating the recipe
 ```
 
-User Experience
+### User Experience
 
-URL:
+### URL: https://lelandcypress.github.io/What-is-for-dinner/
 
-Technology Used:
+### Technology Used:
 
 - CSS Framework: Tailwind
 - JS Framework: jQuery
