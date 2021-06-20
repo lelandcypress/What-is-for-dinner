@@ -93,6 +93,130 @@
         </div>
       </div>
 
+  <p class="beefDisplay"></p>
+
+  <body class="">
+    <header class="bg-blue-400 h-12 md:bg-blue-900 flex justify-center">
+      <div class="holder">
+        <div class="inline-block">LOGO</div>
+        <ul class="ul inline-block float-right">
+          <li class="inline-block"><a href="#">HOME</a></li>
+          <li class="inline-block"><a href="#">ABOUT</a></li>
+          <li class="inline-block"><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <hero>
+      <img class="hero" src="img/dinner400.png" alt="dinner hero" />
+    </hero>
+    <section class="flex flex-wrap lg:grid grid-cols-2 lg:grid-rows-2">
+      <!----CHOOSE YOUR PROTEIN -->
+      <div class="card mx-auto px-5 py-5">
+        <div class="grid grid-rows-1">
+          <div class="titlecard p-8 text-center border-b-2 border-black-600">
+            CHOOSE YOUR PROTEIN
+          </div>
+
+          <div class="grid grid-cols-2 gap-1">
+            <button
+              class="
+                pbutton
+                flex
+                justify-center
+                items-center
+                button
+                rounded
+                bg-gray-50
+                focus:bg-blue-500
+                focus:text-white
+                hover:bg-blue-500
+                hover:text-white
+                text-blue-500
+              "
+              type="submit"
+              id="beefbtn"
+            >
+              <img src="img/beef.png" alt="beef logo" class="h-8 w-8" />
+              <p class="p">Beef</p>
+            </button>
+            <button
+              class="
+                pbutton
+                flex
+                justify-center
+                items-center
+                button
+                rounded
+                bg-gray-50
+                focus:bg-blue-500
+                focus:text-white
+                hover:bg-blue-500
+                hover:text-white
+                text-blue-500
+              "
+              type="submit"
+              id="chickenbtn"
+            >
+              <img src="img/chicken.png" alt="chicken logo" class="h-8 w-8" />
+              <p class="p">Chicken</p>
+            </button>
+            <button
+              class="
+                pbutton
+                flex
+                justify-center
+                items-center
+                button
+                rounded
+                bg-gray-50
+                focus:bg-blue-500
+                focus:text-white
+                hover:bg-blue-500
+                hover:text-white
+                text-blue-500
+              "
+              type="submit"
+              id="fishbtn"
+            >
+              <img src="img/fish.png" alt="fish logo" class="h-8 w-8" />
+              <p class="p">Fish</p>
+            </button>
+            <button
+              class="
+                pbutton
+                flex
+                justify-center
+                items-center
+                button
+                rounded
+                bg-gray-50
+                focus:bg-blue-500
+                focus:text-white
+                hover:bg-blue-500
+                hover:text-white
+                text-blue-500
+              "
+              type="submit"
+              id="porkbtn"
+            >
+              <img src="img/pork.png" alt="pork logo" class="h-8 w-8" />
+              <p class="p">Pork</p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FOOD PREPVIEW-->
+      <div class="card m-20 px-5 py-5 flex">
+        <div meals="meals-container">
+          <p id="recipe-title"></p>
+          <img id="recipe-picture" />
+          Ingredients
+          <ul id="ingredients" class="recipe-list"></ul>
+          Directions
+          <ul id="directions" class="recipe-list"></ul>
+        </div>
+      </div>
       <!----CHOOSE YOUR BEVERAGE -->
       <div class="card mx-auto px-5 py-5">
         <div class="grid grid-rows-1">
@@ -133,6 +257,127 @@
         </div>
       </div>
   </section>
+          <div class="grid grid-cols-2 gap-1">
+            <button
+              class="
+                drink-button
+                pbutton
+                flex
+                justify-center
+                items-center
+                button
+                rounded
+                bg-gray-50
+                focus:bg-blue-500
+                focus:text-white
+                hover:bg-blue-500
+                hover:text-white
+                text-blue-500
+              "
+              type="submit"
+              id="ginBtn"
+            >
+              <img src="img/gin.png" alt="gin logo" class="h-8 w-8" />
+              <p class="p">Gin</p>
+            </button>
+            <button
+              class="
+                drink-button
+                pbutton
+                flex
+                justify-center
+                items-center
+                button
+                rounded
+                bg-gray-50
+                focus:bg-blue-500
+                focus:text-white
+                hover:bg-blue-500
+                hover:text-white
+                text-blue-500
+              "
+              type="submit"
+              id="vodkanBtn"
+            >
+              <img src="img/vodka.png" alt="vodka logo" class="h-8 w-8" />
+              <p class="p">Vodka</p>
+            </button>
+            <button
+              class="
+                drink-button
+                pbutton
+                flex
+                justify-center
+                items-center
+                button
+                rounded
+                bg-gray-50
+                focus:bg-blue-500
+                focus:text-white
+                hover:bg-blue-500
+                hover:text-white
+                text-blue-500
+              "
+              type="submit"
+              id="whiskeyBtn"
+            >
+              <img src="img/whiskey.png" alt="whiskey logo" class="h-8 w-8" />
+              <p class="p">Whiskey</p>
+            </button>
+            <button
+              class="
+                drink-button
+                pbutton
+                flex
+                justify-center
+                items-center
+                button
+                rounded
+                bg-gray-50
+                focus:bg-blue-500
+                focus:text-white
+                hover:bg-blue-500
+                hover:text-white
+                text-blue-500
+              "
+              type="submit"
+              id="beerBtn"
+            >
+              <img src="img/beer.png" alt="beer logo" class="h-8 w-8" />
+              <p class="p">Beer</p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- PREVIEW BEVERAGE-->
+      <div id="beer-container" class="card m-20 px-5 py-5 flex">
+        <img id="beer-picture" class="beer-img" />
+        <p id="beer-title" class=""></p>
+        <!-- <p id="beer-tag" class=""></p> -->
+        <!-- <p id= "beer-abv" class=""></p> -->
+        <p id="beer-description" class=""></p>
+        <!-- <ul id="beer-pairing"></ul> -->
+      </div>
+    </section>
+
+    <!-- choose meals -->
+
+    <!-- <input type="text" id="food-search" />
+    <button id="foodBtn">Find Meal</button> -->
+    <!--display meal-->
+
+    <!--display cocktail-->
+    <!-- <div id="drink-container">
+      <p id="drink-title"></p>
+      <img id="drink-picture" />
+      <p>Cocktail Ingredients</p>
+      <ul id="drink-ingredients" class="recipe-list"></ul>
+        <p>Mixing Directions</p>
+      <ul id="mixing" class="recipe-list">
+      
+      </ul>
+   
+    </div> -->
 
   <!-- SCRIPTS FOR WEBSITE-->
     <script
