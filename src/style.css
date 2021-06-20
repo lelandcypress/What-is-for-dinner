@@ -1,8 +1,8 @@
 .card {
   border-radius: 5px;
   margin-top: 20px;
-  width: auto;
-  height: auto;
+  width: 350px;
+  height: 450px;
   box-shadow: 1px 1px 5px rgba(28, 17, 31, 0.356);
 }
 
@@ -19,4 +19,57 @@
 .protein-title {
   width: 350px;
   background-color: red;
+}
+
+.hero {
+  width: 100%;
+  height: 400px;
+}
+ul {
+  list-style-type: none;
+}
+.ul {
+  margin-right: 20px;
+}
+.ul li {
+  color: white;
+}
+
+.titlecard {
+  font-family: 'Quattrocento', sans-serif;
+}
+
+.p {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.hero {
+  background-image: ;
+}
+
+.holder {
+  display: flex;
+  background-color: red;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.beer-img {
+  position: relative;
+  left: 120px;
+  width: 60px;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.prev {
+  height: auto;
+}
+
+.beer-title {
+  position: relative;
+  top: -30px;
+  font-family: 'Nunito Sans', sans-serif;
 }
