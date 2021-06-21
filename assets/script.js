@@ -1,14 +1,11 @@
-var beefEl = document.getElementById("beefbtn");
-var chickenEl = document.getElementById("chickenbtn");
-var fishEl = document.getElementById("fishbtn");
-var porkEl = document.getElementById("porkbtn");
-var menuChoice = ["beef", "chicken", "fish", "pork"];
+window.onload = function () {
 
 // choose protein button event listeners//
 var meat = document.getElementsByClassName("meat-button");
 for (var i = 0; i < meat.length; i++) {
   (function (index) {
     meat[index].onclick = function () {
+      $(".meatcard").hide();
       userChoice = menuChoice[index];
       //clears inner HTML to prevent search items from stacking//
       $("#directions").html("");
@@ -48,17 +45,23 @@ for (var i = 0; i < meat.length; i++) {
               }
               for (var i = 0; i < data.extendedIngredients.length; i++) {
                 var ingredients = data.extendedIngredients[i].original;
-                $("#ingredients").append("<li>" + ingredients + "</li>");
+                $("#ingredients").append("<li>"  + ingredients + "</li>");
               }
             });
         });
     };
   })(i);
 }
-//Drink Buttons Event Listeners//
+
+var menuChoice = ["beef", "chicken", "fish", "pork"];
+
+
 $(".drink-button").click(function (event) {
+  
   event.stopPropagation();
+  
   userChoice = event.target;
+ 
   $("#drink-directions").html("");
   $("#drink-ingredients").html("");
   $("#drink-container").show();
@@ -67,9 +70,35 @@ $(".drink-button").click(function (event) {
 });
 //Had to build out seperate listener since beer comes from a different API than the cocktails//
 $("#beerBtn").click(function (event) {
+  
   event.stopPropagation();
   $("#beer-container").show();
   $("#drink-container").hide();
   getBeer();
 });
+
+
+
+function getBeer() {
+  var getUrl = "https://api.punkapi.com/v2/beers?food/random";
+  fetch(getUrl)
+    .then(function (beer) {
+      return beer.json();
+    })
+    .then(function (beer) {
+      var random = Math.floor(Math.random() * 20);
+      var chosenBeer = beer[random];
+      $("#beer-picture").attr("src", chosenBeer.image_url);
+      $("#beer-title").text(chosenBeer.name);
+      $("#beer-tag").text(chosenBeer.tagline);
+      $("#beer-abv").text("ABV: " + chosenBeer.abv);
+      $("#beer-description").text("Description: " + chosenBeer.description);
+      console.log(chosenBeer.food_pairing[1]);
+      for (var i = 0; i < chosenBeer.food_pairing.length; i++) {
+        $("#beer-pairing").append(
+          "<li>" + chosenBeer.food_pairing[i] + "</li>"
+        )
+      }
+    })
+}};
 //Note: all cocktail and beer fucitions found on drinks.js

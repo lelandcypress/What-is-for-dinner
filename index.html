@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+   
 
     <title>What's for Dinner?</title>
     <link href="src/style.css" rel="stylesheet" />
+    
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
@@ -26,7 +28,7 @@
     <!-- MAIN SECTION-->
     <section class="flex flex-wrap lg:grid grid-cols-2 lg:grid-rows-2">
     <!----CHOOSE YOUR PROTEIN -->
-    <div class="card mx-auto px-5 py-5">
+    <div class="card meatcard mx-auto px-5 py-5">
       <div class="grid grid-rows-1">
         <div class="p-5 text-center border-b-2 border-black-600">CHOOSE YOUR PROTEIN</div>
         <div class=" grid grid-cols-2 gap-1">
@@ -39,8 +41,15 @@
             <button class="meat-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="porkbtn"><img src="img/pork.png" alt="pork logo" class=" h-8 w-8">
               <p>Pork</p></button>
         </div>
-      </div>
+
+        
+        </div>
+
     </div>
+    
+
+
+
       <!-- FOOD PREPVIEW-->
  <div class="flex flex-col card mx-auto px-5 py-5 h-auto">
   <span class="text-center">✨ YOUR CHOSEN DINNER IS ✨</span>
@@ -52,7 +61,7 @@
     </div>
 </div>
     <!----CHOOSE YOUR BEVERAGE -->
-      <div class="card mx-auto px-5 py-5">
+      <div class="card drinkcard mx-auto px-5 py-5">
         <div class="grid grid-rows-1">
           <div class="rounded text-center py-5 border-b-2 border-black-600">CHOOSE YOUR DRINK</div>
 
@@ -87,6 +96,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/script.js"></script>
-    <script src="assets/drinks.js"></script>    
+    <script src="assets/drinks.js"></script> 
+  
   </body>
 </html>
