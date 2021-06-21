@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.onload = function () {
   var beefEl = document.getElementById("beefbtn");
   var chickenEl = document.getElementById("chickenbtn");
   var fishEl = document.getElementById("fishbtn");
@@ -70,6 +70,7 @@ $(document).ready(function () {
   });
   //Drink Buttons Event Listeners//
   $(".drink-button").click(function (event) {
+    event.stopPropagation();
     userChoice = event.target;
     $("#drink-directions").html("");
     $("#drink-ingredients").html("");
@@ -87,4 +88,4 @@ $(document).ready(function () {
     getBeer();
   });
   //Note: all cocktail and beer functions found on drinks.js
-});
+};
