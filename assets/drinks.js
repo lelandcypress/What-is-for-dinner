@@ -26,12 +26,8 @@ function getRecipe(drinkID) {
       return cocktail.json();
     })
     .then(function (results) {
-<<<<<<< HEAD
-      // console.log(results);
-=======
-      //Method used to add ingredients list from API into an array so developer could use for-loop//
-      //Credit: Stack Overflow//
->>>>>>> main
+      // Method used to add ingredients list from API into an array so developer could use for-loop//
+      // Credit: Stack Overflow//
       results.drinks.forEach((drink) => {
         var drinkEntries = Object.entries(drink),
           ingredientsArray = drinkEntries
