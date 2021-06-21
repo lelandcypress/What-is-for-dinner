@@ -8,7 +8,7 @@ function getDrink(userChoice) {
     .then(function (data) {
       var random = Math.floor(Math.random() * 25);
       var returnedDrink = data.drinks[random];
-      console.log(returnedDrink);
+      // console.log(returnedDrink);
       var drinkImage = returnedDrink.strDrinkThumb;
       $("#drink-title").text(returnedDrink.strDrink);
       $("#drink-picture").attr("src", drinkImage);
@@ -24,7 +24,7 @@ function getRecipe(drinkID) {
       return cocktail.json();
     })
     .then(function (results) {
-      console.log(results);
+      // console.log(results);
       results.drinks.forEach((drink) => {
         var drinkEntries = Object.entries(drink),
           ingredientsArray = drinkEntries
