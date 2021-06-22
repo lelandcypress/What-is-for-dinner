@@ -13,7 +13,10 @@ function getDrink(userChoice) {
       var drinkImage = returnedDrink.strDrinkThumb;
       $("#drink-title").text(returnedDrink.strDrink);
       $("#drink-picture").attr("src", drinkImage);
+      $("#ingredients-drink-title").show();
+      $("#ingredient-choice-text").show();
       var drinkID = returnedDrink.idDrink;
+      console.log(drinkID);
       getRecipe(drinkID);
     });
 }
@@ -53,7 +56,7 @@ function getRecipe(drinkID) {
       $("#mixing").text(mix);
     });
 }
-//Beer Button Function//
+//Beer Button Event listener
 function getBeer() {
   var getUrl = "https://api.punkapi.com/v2/beers?food/random";
   fetch(getUrl)
