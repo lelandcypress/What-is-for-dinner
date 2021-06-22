@@ -103,3 +103,4 @@ function getBeer() {
     })
 }};
 //Note: all cocktail and beer fucitions found on drinks.js
+
