@@ -15,8 +15,8 @@
       rel="stylesheet"
     />
   </head>
-<body class="">
-  <!--HEADER-->
+  <body class="">
+    <!--HEADER-->
     <header class="bg-blue-400 h-9">
       <div class="inline-block">LOGO</div>
       <ul class="inline-block float-right">
@@ -63,23 +63,115 @@
     <!----CHOOSE YOUR BEVERAGE -->
       <div class="card drinkcard mx-auto px-5 py-5">
         <div class="grid grid-rows-1">
-          <div class="rounded text-center py-5 border-b-2 border-black-600">CHOOSE YOUR DRINK</div>
+          <div class="rounded text-center py-5 border-b-2 border-black-600">
+            CHOOSE YOUR DRINK
+          </div>
 
-        <div class=" grid grid-cols-2 gap-1">
-            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500  " type="submit" id="ginBtn"><img src="img/gin.png" alt="gin logo" class=" h-8 w-8">
-              <p>Gin</p></button>  
-            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="vodkanBtn"><img src="img/vodka.png" alt="vodka logo" class=" h-8 w-8">
-              <p>Vodka</p></button>
-            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500" type="submit" id="whiskeyBtn"><img src="img/whiskey.png" alt="whiskey logo" class=" h-8 w-8">
-              <p>Whiskey</p></button>
-            <button class="drink-button pbutton flex justify-center items-center button rounded bg-gray-50 focus:bg-blue-500 focus:text-white  hover:bg-blue-500 hover:text-white text-blue-500 " type="submit" id="beerBtn"><img src="img/beer.png" alt="beer logo" class=" h-8 w-8">
-              <p>Beer</p></button>
+          <div class="grid grid-cols-2 gap-1">
+            <div class="drink-button">
+              <button
+                class="
+                  pbutton
+                  flex
+                  justify-center
+                  items-center
+                  button
+                  rounded
+                  bg-gray-50
+                  focus:bg-blue-500
+                  focus:text-white
+                  hover:bg-blue-500
+                  hover:text-white
+                  text-blue-500
+                "
+                type="submit"
+                id="ginBtn"
+              >
+                <img src="img/gin.png" alt="gin logo" class="h-8 w-8" />
+                <p class="padding">Gin</p>
+              </button>
+            </div>
+            <div class="drink-button">
+              <button
+                class="
+                  drink-button
+                  pbutton
+                  flex
+                  justify-center
+                  items-center
+                  button
+                  rounded
+                  bg-gray-50
+                  focus:bg-blue-500
+                  focus:text-white
+                  hover:bg-blue-500
+                  hover:text-white
+                  text-blue-500
+                "
+                type="submit"
+                id="vodkanBtn"
+              >
+                <img src="img/vodka.png" alt="vodka logo" class="h-8 w-8" />
+                <p class="padding">Vodka</p>
+              </button>
+            </div>
+            <div class="drink-button">
+              <button
+                class="
+                  drink-button
+                  pbutton
+                  flex
+                  justify-center
+                  items-center
+                  button
+                  rounded
+                  bg-gray-50
+                  focus:bg-blue-500
+                  focus:text-white
+                  hover:bg-blue-500
+                  hover:text-white
+                  text-blue-500
+                "
+                type="submit"
+                id="whiskeyBtn"
+              >
+                <img src="img/whiskey.png" alt="whiskey logo" class="h-8 w-8" />
+                <p class="padding">Tequila</p>
+              </button>
+            </div>
+
+            <button
+              class="
+                drink-button
+                pbutton
+                flex
+                justify-center
+                items-center
+                button
+                rounded
+                bg-gray-50
+                focus:bg-blue-500
+                focus:text-white
+                hover:bg-blue-500
+                hover:text-white
+                text-blue-500
+              "
+              type="submit"
+              id="beerBtn"
+            >
+              <img src="img/beer.png" alt="beer logo" class="h-8 w-8" />
+              <p>Beer</p>
+            </button>
+          </div>
         </div>
-       </div>
+        Save Recipe
       </div>
 
       <!-- PREVIEW BEVERAGE-->
-      <div id="beer-container" class="flex flex-col card mx-auto px-5 py-5 prev ">
+      <div
+        id="beer-container"
+        class="flex flex-col card mx-auto px-5 py-5 prev"
+      >
         <span class="text-center">✨ YOUR CHOSEN BEVERAGE IS ✨</span>
         <div>
           <img id="beer-picture" class="beer-img rotate" src="" />
@@ -89,6 +181,25 @@
           <p id="beer-description" class="text-justify pt-5"></p>
         </div>
       </div>
+      <div
+        id="drink-container"
+        class="hidden flex flex-col card mx-auto px-5 py-5 prev"
+      >
+        <span id="ingredients-drink-title" class="hidden text-center"
+          >✨ YOUR CHOSEN BEVERAGE IS ✨</span
+        >
+        <div>
+          <img id="drink-picture" src="" />
+        </div>
+        <div>
+          <p id="drink-title" class="text-center text-4xl"></p>
+          <sp id="ingredients-drink-title" class="text-xl">Ingredients</sp>
+          <ul id="drink-ingredients" class="text-justify pt-5"></ul>
+          <br />
+          <p class="text-xl">Mixing it</p>
+          <p id="mixing"></p>
+        </div>
+      </div>
     </section>
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
@@ -96,7 +207,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/script.js"></script>
+<<<<<<< HEAD
     <script src="assets/drinks.js"></script> 
   
+=======
+    <script src="assets/drinks.js"></script>
+>>>>>>> a03bd0efee19bb313a91b683386aadb23ccf66e6
   </body>
 </html>

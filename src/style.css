@@ -36,16 +36,22 @@ ul {
 }
 
 .titlecard {
-  font-family: 'Quattrocento', sans-serif;
+  font-family: "Quattrocento", sans-serif;
 }
 
 .p {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
+<<<<<<< HEAD
 /* .hero {
   background-image: ;
 } */
+=======
+/*.hero {
+  background-image: ;
+}*/
+>>>>>>> a03bd0efee19bb313a91b683386aadb23ccf66e6
 
 .holder {
   display: flex;
@@ -71,5 +77,11 @@ ul {
 .beer-title {
   position: relative;
   top: -30px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+}
+.hide {
+  display: none;
+}
+.padding {
+  padding: 50px 40px 40px 0px;
 }
