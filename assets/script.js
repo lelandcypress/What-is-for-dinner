@@ -1,6 +1,6 @@
 window.onload = function () {
   $(".dinnercard").hide();
-  $(".drinkcard").hide();
+  $(".beveragecard").hide();
 // choose protein button event listeners//
 var meat = document.getElementsByClassName("meat-button");
 for (var i = 0; i < meat.length; i++) {
@@ -8,6 +8,7 @@ for (var i = 0; i < meat.length; i++) {
     meat[index].onclick = function () {
       userChoice = menuChoice[index];
       $(".meatcard").hide();
+      $(".dinnercard").show();
       //clears inner HTML to prevent search items from stacking//
       $("#directions").html("");
       $("#ingredients").html("");
@@ -64,6 +65,7 @@ $(".drink-button").click(function (event) {
   $("#drink-directions").html("");
   $("#drink-ingredients").html("");
   $(".drinkcard").hide();
+  $(".beveragecard").show();
   // $("#drink-container").show();
   // $("#beer-container").hide();
   getDrink(userChoice.innerHTML);
