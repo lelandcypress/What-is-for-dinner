@@ -26,7 +26,7 @@
       </ul>
     </header>
     <!-- MAIN SECTION-->
-    <section class="flex flex-wrap lg:grid grid-cols-2 lg:grid-rows-2">
+    <section class="flex flex-wrap lg:grid grid-cols-4 lg:grid-rows-2">
     <!----CHOOSE YOUR PROTEIN -->
     <div class="card meatcard mx-auto px-5 py-5">
       <div class="grid grid-rows-1">
@@ -56,7 +56,12 @@
         Ingredients
         <ul id="ingredients" class="recipe-list">
     </div>
-</div>
+              <sp id="directions-food-title" class="cursor-pointer text-xl"
+            >Directions<sp id="click-me" class="hide text-sm">
+              click to see more</sp
+            ></sp>
+          <ul id="directions" class="recipe-list hide"></ul>
+  </div>
     <!----CHOOSE YOUR BEVERAGE -->
       <div class="card drinkmenu mx-auto px-5 py-5">
         <div class="grid grid-rows-1">
@@ -161,8 +166,7 @@
             </button>
           </div>
         </div>
-        Save Recipe
-      </div>
+        </div>
 
       <!-- PREVIEW BEVERAGE-->
       <div
