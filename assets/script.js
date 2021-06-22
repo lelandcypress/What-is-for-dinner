@@ -1,5 +1,6 @@
 window.onload = function () {
-
+  $(".dinnercard").hide();
+  $(".drinkcard").hide();
 // choose protein button event listeners//
 var meat = document.getElementsByClassName("meat-button");
 for (var i = 0; i < meat.length; i++) {
