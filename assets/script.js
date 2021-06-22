@@ -1,18 +1,21 @@
 window.onload = function () {
-
+  $(".dinnercard").hide();
+  $(".drinkscard").hide();
+  $(".beercard").hide();
 // choose protein button event listeners//
 var meat = document.getElementsByClassName("meat-button");
 for (var i = 0; i < meat.length; i++) {
   (function (index) {
     meat[index].onclick = function () {
       $(".meatcard").hide();
+      $(".dinnercard").show();
       userChoice = menuChoice[index];
       //clears inner HTML to prevent search items from stacking//
       $("#directions").html("");
       $("#ingredients").html("");
       //First fetch request to Spoonacular API, searches by ingredient name//
       var getUrl =
-        "https://api.spoonacular.com/recipes/findByIngredients?apiKey=8cc43afd180940aba414f655f8a71f64&ingredients=" +
+        "https://api.spoonacular.com/recipes/findByIngredients?apiKey=ae7a517d2a4c413885e47056369d51bc&ingredients=" +
         userChoice +
         "&number=20";
       fetch(getUrl)
@@ -31,7 +34,7 @@ for (var i = 0; i < meat.length; i++) {
           var getrecipeUrl =
             "https://api.spoonacular.com/recipes/" +
             recipeID +
-            "/information?apiKey=8cc43afd180940aba414f655f8a71f64&includeNutrition=true";
+            "/information?apiKey=ae7a517d2a4c413885e47056369d51bc&includeNutrition=true";
           fetch(getrecipeUrl)
             .then(function (response) {
               return response.json();
@@ -57,24 +60,22 @@ var menuChoice = ["beef", "chicken", "fish", "pork"];
 
 
 $(".drink-button").click(function (event) {
-  
   event.stopPropagation();
-  
   userChoice = event.target;
- 
   $("#drink-directions").html("");
   $("#drink-ingredients").html("");
-  $("#drink-container").show();
-  $("#beer-container").hide();
+  $(".drinkmenu").hide();
+  $(".beercard").hide();
+  $(".drinkscard").show();
   getDrink(userChoice.innerHTML);
 });
 //Had to build out seperate listener since beer comes from a different API than the cocktails//
 $("#beerBtn").click(function (event) {
-  
   event.stopPropagation();
-  $("#beer-container").show();
-  $("#drink-container").hide();
-  getBeer();
+  $(".drinkmenu").hide();
+  $(".drinkscard").hide();
+  $(".beercard").show();
+    getBeer();
 });
 
 
