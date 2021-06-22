@@ -1,9 +1,10 @@
 .card {
   border-radius: 5px;
   margin-top: 20px;
-  width: 350px;
-  height: 450px;
   box-shadow: 1px 1px 5px rgba(28, 17, 31, 0.356);
+}
+.cardmin {
+  height: 450px;
 }
 
 .input {
@@ -17,7 +18,6 @@
 }
 
 .protein-title {
-  width: 350px;
   background-color: red;
 }
 
@@ -38,7 +38,9 @@ ul {
 .titlecard {
   font-family: "Quattrocento", sans-serif;
 }
-
+.t {
+  font-family: 'Quattrocento', sans-serif;
+}
 .p {
   font-family: "Nunito Sans", sans-serif;
 }
@@ -79,3 +81,13 @@ ul {
 .padding {
   padding: 50px 40px 40px 0px;
 }
+
+.mwidth {
+  max-width: 90%;
+}
+
+#recipe-picture {
+  height: 200px;
+  width: auto;
+}
+
