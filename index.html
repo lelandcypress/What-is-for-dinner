@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+   
 
     <title>What's for Dinner? changed</title>
     <link href="src/style.css" rel="stylesheet" />
+    
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
   </head>
   <body class="">
+
     <!-- navbar goes here -->
     <nav class="bg-gray-100">
       <div class="mwidth mx-auto px-4">
@@ -109,17 +112,19 @@
     </div>
     <!--HEADER-->
     <!-- <header class="bg-blue-400 h-9">
+
       <div class="inline-block">LOGO</div>
       <ul class="ul inline-block float-right">
         <li class="inline-block"><a href="#">HOME</a></li>
         <li class="inline-block"><a href="#">ABOUT</a></li>
         <li class="inline-block"><a href="#">CONTACT</a></li>
       </ul>
-    </header> -->
+    </header>
     <!-- MAIN SECTION-->
     <section class="flex flex-wrap lg:grid grid-cols-2 lg:grid-rows-2">
+
       <!----CHOOSE YOUR PROTEIN -->
-      <div class="card cardmin mx-auto px-5 py-5 lg:w-3/5">
+      <div class="meatcard card cardmin mx-auto px-5 py-5 lg:w-3/5">
         <div class="grid grid-rows-1">
           <div class="p-5 text-center border-b-2 border-black-600">
             CHOOSE YOUR PROTEIN
@@ -222,7 +227,7 @@
       </div>
       <!-- FOOD PREPVIEW-->
       <div
-        class="flex flex-col card mx-auto px-5 py-5 prev lg:auto minw lg:mr-4"
+        class="dinner card flex flex-col card mx-auto px-5 py-5 prev lg:auto minw lg:mr-4"
       >
         <p class="text-center">✨ YOUR CHOSEN DINNER IS ✨</p>
         <span
@@ -241,13 +246,15 @@
       </div>
 
       <!----CHOOSE YOUR BEVERAGE -->
-      <div class="card cardmin mx-auto px-5 py-5 lg:w-3/5">
+      <div class=" drinkmenu card cardmin mx-auto px-5 py-5 lg:w-3/5">
+
         <div class="grid grid-rows-1">
-          <div class="rounded text-center border-b-2 border-black-600 py-5">
+          <div class="rounded text-center py-5 border-b-2 border-black-600">
             CHOOSE YOUR DRINK
           </div>
 
           <div class="grid grid-cols-2 gap-1">
+
             <button
               class="
                 drink-button
@@ -263,6 +270,7 @@
                 hover:bg-blue-500
                 hover:text-white
                 text-blue-500
+
                 lg:w-auto
               "
               type="submit"
@@ -333,6 +341,7 @@
                 hover:text-white
                 text-blue-500
                 lg:w-auto
+
               "
               type="submit"
               id="beerBtn"
@@ -342,29 +351,27 @@
             </button>
           </div>
         </div>
+
       </div>
 
       <!-- PREVIEW BEVERAGE-->
       <div
         id="beer-container"
-        class="flex flex-col card mx-auto card px-5 py-5 lg:w-3/5"
+
+        class="flex beercard flex-col card mx-auto card px-5 py-5 lg:w-3/5"
       >
-        <span class="text-center">✨ YOUR CHOSEN BEVERAGE IS ✨</span>
+        <span class=" text-center">✨ YOUR CHOSEN BEVERAGE IS ✨</span>
         <div>
           <img id="beer-picture" class="beer-img rotate" />
+
         </div>
         <div>
           <p id="beer-title" class="beer-title text-center text-6xl"></p>
           <p id="beer-description" class="text-justify pt-5"></p>
         </div>
       </div>
-      <div
-        id="drink-container"
-        class="hidden flex flex-col card mx-auto px-5 py-5 prev"
-      >
-        <span id="ingredients-drink-title" class="hidden text-center"
-          >✨ YOUR CHOSEN BEVERAGE IS ✨</span
-        >
+      <div id="drink-container" class="drinkscard hidden flex flex-col card mx-auto px-5 py-5 prev">
+        <span id="ingredients-drink-title" class="hidden text-center">✨ YOUR CHOSEN BEVERAGE IS ✨</span>
         <div>
           <img id="drink-picture" src="" />
         </div>
